@@ -6,13 +6,13 @@
 
 html,
 body {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 
 .main {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     /* background: #000; */
     position: relative;
     display: flex;
@@ -21,17 +21,17 @@ body {
 }
 
 .main img {
-    height: 500px;
+    height: 80vh;
     z-index: 2;
     border: 5px solid black;
     position: absolute;
-    top: 27.5%;
+    top: 20vh;
 }
 
 .scroll-div {
-    width: 100%;
+    width: 100vw;
     position: absolute;
-    top: 20%;
+    top: 20vh;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
@@ -39,8 +39,8 @@ body {
 }
 
 .scroll-div2 {
-    top: 40%;
-    width: 100%;
+    top: 40vh;
+    width: 100vw;
     z-index: 99;
     color: transparent;
     overflow-x: auto;
@@ -52,9 +52,9 @@ body {
 }
 
 .scroll-div3 {
-    width: 100%;
+    width: 100vw;
     position: absolute;
-    top: 60%;
+    top: 60vh;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
@@ -162,7 +162,7 @@ body {
 .navbar #h1-2 {
     letter-spacing: 5px;
     font-weight: 800;
-    color: #6C676E;
+    color: #D4A14C;
     padding-right: 170px;
 }
 
@@ -174,11 +174,14 @@ body {
 }
 
 footer {
+    height: 10vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0px 40px 40px 40px;
-    border-bottom: 1px solid black;
+    position: absolute;
+    top: 90vh;
 }
 
 #footer-h11 {
@@ -188,5 +191,27 @@ footer {
 
 #footer-h12 {
     font-size: 1rem;
-    border-bottom: 2px solid lightcyan;
+}
+
+
+@media (max-width:600px) {
+    .navbar #h1-1 {
+        padding-left: 0px;
+        font-size: 0.8rem;
+        letter-spacing: 3.5px;
+    }
+
+    .navbar #h1-2 {
+        font-size: 1rem;
+        padding-right: 0px;
+        padding-left: 50px;
+    }
+    .navbar-end{
+        padding-left: 10vw;
+        font-size: 1rem;
+    }
+
+    .main img {
+        height: 65vh;
+    }
 }
